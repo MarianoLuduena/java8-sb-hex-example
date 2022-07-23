@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: java8-sb-hex-example
+  jpa:
+    open-in-view: false
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,refresh
